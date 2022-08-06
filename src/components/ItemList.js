@@ -23,7 +23,7 @@ const ItemList = () => {
                 <div className ="check-mark"> 
                     <div className="check-icon" style ={checkStyle}></div>
                 </div>
-                <h4 className ='item-name'>chocolayesssss</h4>
+                <h4 className ='item-name'>chocolayesssd</h4>
                 <div className='icon-container'>
                     <i class="fa-solid fa-trash-can"></i>
                 </div>

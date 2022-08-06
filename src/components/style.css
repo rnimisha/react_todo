@@ -103,12 +103,13 @@ body{
     width: 1.2rem;
     border-radius: 50px;
 }
-.check-mark:hover{
+.check-icon:hover{
     box-shadow: 35px 35px 68px 0px rgba(212, 197, 203, 0.5), inset -7px -7px 16px 0px rgba(212, 197, 203, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255);
 }
 .item-name{
     margin-left: 15px;
     width: 80%;
+    overflow: scroll;
 }
 
 .icon-container{
