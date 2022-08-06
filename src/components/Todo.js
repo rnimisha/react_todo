@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import HeadIcon from './HeadIcon';
+import InputForm from './InputForm';
 import ItemList from './ItemList';
 import './style.css';
 
@@ -19,6 +20,12 @@ const Todo = () => {
 
     const [itemInput, setItemInput] =useState("");
     const [itemList, setItemList] =useState(fetchLocalData());
+
+    //function to update States
+
+    const updateItemInput = (value) =>{
+        setItemInput(value)
+    }
 
     // adds item from form to the array list
     const addItem = () =>{
@@ -62,13 +69,8 @@ const Todo = () => {
         <>
         <div className ='todo-container'>
             <HeadIcon/>
-            <div className="input-form-container">
-                <div className ="input-container">
-                    <input type="text" placeholder='Item Name' value ={itemInput} onChange={(event) =>{setItemInput(event.target.value)}}/>
-                </div> 
-                <div className='add-icon-container' onClick={addItem}><i className="fa-solid fa-plus"></i></div>
-            </div>
-            <ItemList itemList ={itemList} deleteItem={deleteItem} checkListItem ={checkListItem}/>
+            <InputForm itemInput ={itemInput} updateItemInput ={updateItemInput} addItem={addItem}/>
+            <ItemList itemList ={itemList} deleteItem={deleteItem} checkListItem ={checkListItem} />
         </div>
         </>
     )
