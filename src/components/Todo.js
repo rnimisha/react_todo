@@ -33,6 +33,13 @@ const Todo = () => {
         setItemList(list)
     }
 
+    const checkListItem = (index, bool) =>{
+        const notBool = (!bool)
+        const list = itemList.map( (item) =>{
+            return item.id === index ? {id : item.id, data: item.data, checked : notBool} : item
+        })
+        setItemList(list);
+    }
 
     return (
         <>
@@ -44,7 +51,7 @@ const Todo = () => {
                 </div> 
                 <div className='add-icon-container' onClick={addItem}><i className="fa-solid fa-plus"></i></div>
             </div>
-            <ItemList itemList ={itemList} deleteItem={deleteItem}/>
+            <ItemList itemList ={itemList} deleteItem={deleteItem} checkListItem ={checkListItem}/>
         </div>
         </>
     )

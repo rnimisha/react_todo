@@ -105,6 +105,7 @@ body{
     border: 1px solid #d4c5cb;
 }
 .check-icon:hover{
+    border: 1px solid #6a1235;
     box-shadow: 35px 35px 68px 0px #d4c5cb80, inset -7px -7px 16px 0px #d4c5cb99, inset 0px 11px 28px 0px rgb(255, 255, 255);
 }
 .item-name{
