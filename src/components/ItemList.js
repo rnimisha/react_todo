@@ -3,10 +3,11 @@ import './style.css';
 
 const ItemList = ({itemList, deleteItem}) => {
 
-    
-
     const checkStyle ={
-        backgroundColor: '#c1b3b9',
+        backgroundColor: '#c1b3b9'
+    }
+    const unCheckStyle ={
+        backgroundColor: '#fff'
     }
 
     return (
@@ -17,7 +18,7 @@ const ItemList = ({itemList, deleteItem}) => {
                         return(
                             <div className ="each-item" key={item.id}> 
                                 <div className ="check-mark"> 
-                                    <div className="check-icon" style ={checkStyle}></div>
+                                    <div className="check-icon" style = {item.checked === true ? checkStyle : unCheckStyle} ></div>
                                 </div>
                                 <h4 className ='item-name'>{item.data}</h4>
                                 <div className='icon-container'>

@@ -16,7 +16,8 @@ const Todo = () => {
         }
         const newData ={
             id : new Date().getTime().toString(),
-            data : itemInput
+            data : itemInput,
+            checked : false
         }
         setItemList([...itemList, newData]);
 
@@ -24,6 +25,7 @@ const Todo = () => {
         setItemInput("");
     }
 
+    //deletes item from the list
     const deleteItem = (id) =>{
         const list = itemList.filter((item) =>{
             return id !== item.id
