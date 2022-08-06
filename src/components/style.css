@@ -12,7 +12,7 @@ body{
     position: relative;
     background-color: #ffffff; 
     border-radius: 26px; 
-    box-shadow: 0px 35px 68px 0px #d4c5cb80, inset 0px -7px 16px 0px #d4c5cb99, inset 0px 11px 28px 0px #ffffff;
+    box-shadow: 0px 35px 68px 0px #b698a080, inset 0px -9px 16px 0px #b698a099, inset 0px 11px 28px 0px #ffffff;
 }
 
 .todo-top-icon-container{
@@ -23,7 +23,7 @@ body{
     top: -40px;
     left: 40%;
     border-radius: 50px;
-    box-shadow: inset 0px 35px 68px 0px #d4c5cb80, 0px -7px 16px 0px #d4c5cb99,  0px 11px 28px 0px #ffffff;
+    box-shadow: inset 0px 35px 68px 0px #b698a080, 0px -7px 16px 0px #b698a099,  0px 11px 28px 0px #ffffff;
 
 }
 
@@ -49,7 +49,7 @@ body{
     height: 3rem;
     border: none;
     background: transparent;
-    border-bottom: 3px solid #d4c5cb;
+    border-bottom: 3px solid #b698a0;
     outline: none;
     position: relative;
     font-size: 1.2rem;
@@ -66,14 +66,14 @@ body{
     padding-top: 8px;
     box-shadow:  9px 9px 18px #c1b3b9, -9px -9px 18px #e7d7dd;
     background-color: #ffffff; 
-    box-shadow: 35px 35px 68px 0px #d4c5cb80, 
-    inset -8px -8px 16px 0px #d4c5cb99, inset 0px 11px 28px 0px #ffffff;
+    box-shadow: 35px 35px 68px 0px #b698a080, 
+    inset -8px -8px 16px 0px #b698a099, inset 0px 11px 28px 0px #ffffff;
 }
 
 .add-icon-container:hover{
-    background-color: #d4c5cb;
-    box-shadow: inset 35px 35px 68px 0px #d4c5cb80, 
-    inset 8px 8px -16px 0px #d4c5cb99, inset 0px -11px -28px 0px #ffffff;
+    background-color: #b698a0;
+    box-shadow: inset 35px 35px 68px 0px #b698a080, 
+    inset 8px 8px -16px 0px #b698a099, inset 0px -11px -28px 0px #ffffff;
 }
 .fa-plus{
     font-size: 1.8rem;
@@ -104,11 +104,11 @@ body{
     height: 1.2rem;
     width: 1.2rem;
     border-radius: 50px;
-    border: 1px solid #d4c5cb;
+    border: 1px solid #b698a0;
 }
 .check-icon:hover{
     border: 1px solid #6a1235;
-    box-shadow: 35px 35px 68px 0px #d4c5cb80, inset -7px -7px 16px 0px #d4c5cb99, inset 0px 11px 28px 0px rgb(255, 255, 255);
+    box-shadow: 35px 35px 68px 0px #b698a080, inset -7px -7px 16px 0px #b698a099, inset 0px 11px 28px 0px rgb(255, 255, 255);
 }
 .item-name{
     margin-left: 15px;
@@ -131,4 +131,11 @@ body{
 
 .fa-pen:hover{
     color :#809ea2
+}
+
+@media only screen and (max-width: 992px) {
+    .todo-container{
+        width: 90%;
+        height: 80vh;
+    }
 }
