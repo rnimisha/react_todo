@@ -1,12 +1,24 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import HeadIcon from './HeadIcon';
 import ItemList from './ItemList';
 import './style.css';
 
+//fetch list from local storage
+const fetchLocalData = () =>{
+    const fetchedList = localStorage.getItem("todolist");
+
+    if(fetchedList){
+        return JSON.parse(fetchedList);
+    }
+    else{
+        return []; 
+    }
+}
+
 const Todo = () => {
 
     const [itemInput, setItemInput] =useState("");
-    const [itemList, setItemList] =useState([]);
+    const [itemList, setItemList] =useState(fetchLocalData());
 
     // adds item from form to the array list
     const addItem = () =>{
@@ -33,6 +45,7 @@ const Todo = () => {
         setItemList(list)
     }
 
+    //change checked value function
     const checkListItem = (index, bool) =>{
         const notBool = (!bool)
         const list = itemList.map( (item) =>{
@@ -40,6 +53,10 @@ const Todo = () => {
         })
         setItemList(list);
     }
+
+    useEffect( () => {
+        localStorage.setItem("todolist", JSON.stringify(itemList))
+    },[itemList])
 
     return (
         <>
