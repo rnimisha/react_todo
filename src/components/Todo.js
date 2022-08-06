@@ -6,6 +6,7 @@ import './style.css';
 const Todo = () => {
 
     const [itemInput, setItemInput] =useState("");
+    const [itemList, setItemList] =useState(['a','b','c']);
 
     return (
         <>
@@ -17,7 +18,7 @@ const Todo = () => {
                 </div> 
                 <div className='add-icon-container'><i class="fa-solid fa-plus"></i></div>
             </div>
-            <ItemList/>
+            <ItemList itemList ={itemList}/>
         </div>
         </>
     )
