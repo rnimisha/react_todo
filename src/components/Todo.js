@@ -24,6 +24,14 @@ const Todo = () => {
         setItemInput("");
     }
 
+    const deleteItem = (id) =>{
+        const list = itemList.filter((item) =>{
+            return id !== item.id
+        })
+        setItemList(list)
+    }
+
+
     return (
         <>
         <div className ='todo-container'>
@@ -34,7 +42,7 @@ const Todo = () => {
                 </div> 
                 <div className='add-icon-container' onClick={addItem}><i className="fa-solid fa-plus"></i></div>
             </div>
-            <ItemList itemList ={itemList}/>
+            <ItemList itemList ={itemList} deleteItem={deleteItem}/>
         </div>
         </>
     )
