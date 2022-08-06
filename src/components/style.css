@@ -75,8 +75,9 @@ body{
     box-shadow: inset 35px 35px 68px 0px #b698a080, 
     inset 8px 8px -16px 0px #b698a099, inset 0px -11px -28px 0px #ffffff;
 }
-.fa-plus{
-    font-size: 1.8rem;
+.fa-plus, .input-form-container .fa-pen{
+    font-size: 1.3rem;
+    margin-top: 0.41rem;
 }
 
 .item-container{
@@ -120,7 +121,7 @@ body{
     width: 20%;
     text-align: right;
 }
-.fa-trash-can, .fa-pen{
+.fa-trash-can, .icon-container .fa-pen{
     margin-top: 0.2rem;
     font-size: 1.2rem;
     color: #b4afaf;
@@ -129,7 +130,7 @@ body{
     color: #b26565;
 }
 
-.fa-pen:hover{
+.icon-container .fa-pen:hover{
     color :#809ea2
 }
 

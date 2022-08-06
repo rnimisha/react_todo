@@ -97,7 +97,7 @@ const Todo = () => {
         <>
         <div className ='todo-container'>
             <HeadIcon/>
-            <InputForm itemInput ={itemInput} updateItemInput ={updateItemInput} addItem={addItem}/>
+            <InputForm itemInput ={itemInput} updateItemInput ={updateItemInput} addItem={addItem} updateItem ={updateItem}/>
             <ItemList itemList ={itemList} deleteItem={deleteItem} checkListItem ={checkListItem} editItem ={editItem} />
         </div>
         </>
