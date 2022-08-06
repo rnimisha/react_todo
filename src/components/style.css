@@ -84,6 +84,8 @@ body{
     margin-right: auto;
     margin-top: 2rem;
     width: 70%;
+    height: 60%;
+    overflow: scroll;
 }
 
 .each-item{
@@ -115,14 +117,18 @@ body{
 }
 
 .icon-container{
-    width: 10%;
+    width: 20%;
     text-align: right;
 }
-.fa-trash-can{
+.fa-trash-can, .fa-pen{
     margin-top: 0.2rem;
     font-size: 1.2rem;
     color: #b4afaf;
 }
 .fa-trash-can:hover{
     color: #b26565;
+}
+
+.fa-pen:hover{
+    color :#809ea2
 }

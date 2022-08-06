@@ -31,6 +31,8 @@ const ItemList = ({itemList, deleteItem, checkListItem}) => {
                                 </div>
                                 <h4 className ='item-name' style={item.checked === true ? strikeTextStyle : unStrikeTextStyle}>{item.data}</h4>
                                 <div className='icon-container'>
+                                    <i className="fa-solid fa-pen" ></i> 
+                                    <span>&nbsp; &nbsp;</span>
                                     <i className="fa-solid fa-trash-can"  onClick={() => deleteItem(item.id)}></i>
                                 </div>
                             </div>
