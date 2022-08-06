@@ -21,6 +21,10 @@ const Todo = () => {
     const [itemInput, setItemInput] =useState("");
     const [itemList, setItemList] =useState(fetchLocalData());
 
+    //for editing
+    const [updateItem, setUpdateItem] = useState(false);
+    const [itemToEdit, setItemToEdit] = useState('');
+
     //function to update States
 
     const updateItemInput = (value) =>{
@@ -29,19 +33,36 @@ const Todo = () => {
 
     // adds item from form to the array list
     const addItem = () =>{
+
         if(!itemInput)
         {
             return;
         }
-        const newData ={
+
+        if(updateItem === true){
+
+            const newList = itemList.map((item) => {
+                return item.id === itemToEdit ? {id : item.id, data: itemInput, checked : false} : item
+            })
+            setItemList(newList);
+            setItemToEdit('');
+            setItemInput('');
+            setUpdateItem(false);
+            return;
+        }
+        else{
+             const newData ={
             id : new Date().getTime().toString(),
             data : itemInput,
             checked : false
-        }
-        setItemList([...itemList, newData]);
+            }
+            setItemList([...itemList, newData]);
 
-        //clear input field
-        setItemInput("");
+            //clear input field
+            setItemInput("");
+        }
+  
+       
     }
 
     //deletes item from the list
@@ -49,7 +70,14 @@ const Todo = () => {
         const list = itemList.filter((item) =>{
             return id !== item.id
         })
-        setItemList(list)
+        setItemList(list);
+    }
+
+    //edit item in the list
+    const editItem = (index, value) =>{
+        setItemToEdit(index);
+        setItemInput(value);
+        setUpdateItem(true);
     }
 
     //change checked value function
@@ -70,7 +98,7 @@ const Todo = () => {
         <div className ='todo-container'>
             <HeadIcon/>
             <InputForm itemInput ={itemInput} updateItemInput ={updateItemInput} addItem={addItem}/>
-            <ItemList itemList ={itemList} deleteItem={deleteItem} checkListItem ={checkListItem} />
+            <ItemList itemList ={itemList} deleteItem={deleteItem} checkListItem ={checkListItem} editItem ={editItem} />
         </div>
         </>
     )

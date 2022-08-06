@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.css';
 
-const ItemList = ({itemList, deleteItem, checkListItem}) => {
+const ItemList = ({itemList, deleteItem, checkListItem, editItem}) => {
 
     const checkStyle ={
         backgroundColor: '#c1b3b9'
@@ -31,7 +31,7 @@ const ItemList = ({itemList, deleteItem, checkListItem}) => {
                                 </div>
                                 <h4 className ='item-name' style={item.checked === true ? strikeTextStyle : unStrikeTextStyle}>{item.data}</h4>
                                 <div className='icon-container'>
-                                    <i className="fa-solid fa-pen" ></i> 
+                                    <i className="fa-solid fa-pen" onClick={() => editItem(item.id, item.data)}></i> 
                                     <span>&nbsp; &nbsp;</span>
                                     <i className="fa-solid fa-trash-can"  onClick={() => deleteItem(item.id)}></i>
                                 </div>
