@@ -1,0 +1,13 @@
+.todo-container{
+    width: 40%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+    margin-top: 15vh;
+
+    background-color: rgba(255, 255, 255, 1); 
+    border-radius: 26px; 
+    box-shadow: 0px 35px 68px 0px rgba(212, 197, 203, 0.5), inset 0px -7px 16px 0px rgba(212, 197, 203, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255);
+}
