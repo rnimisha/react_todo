@@ -8,6 +8,12 @@ const Todo = () => {
         <div className="todo-top-icon-container">
             <img className="todo-icon" src="images/todo-cute-icon.png" alt="" />
         </div>
+        <div className="input-form-container">
+            <div className ="input-container">
+                <input type="text" placeholder='Item Name'/>
+            </div> 
+            <div className='add-icon-container'><i class="fa-solid fa-plus"></i></div>
+        </div>
     </div>
     </>
   )

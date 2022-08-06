@@ -2,25 +2,25 @@
     width: 40%;
     height: 70vh;
     display: flex;
-    align-items: center;
-    align-content: center;
+    /* align-items: center; */
+    /* align-content: center; */
     margin: auto;
     margin-top: 15vh;
     position: relative;
-    background-color: rgba(255, 255, 255, 1); 
+    background-color: #ffffff; 
     border-radius: 26px; 
-    box-shadow: 0px 35px 68px 0px rgba(212, 197, 203, 0.5), inset 0px -7px 16px 0px rgba(212, 197, 203, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255);
+    box-shadow: 0px 35px 68px 0px #d4c5cb80, inset 0px -7px 16px 0px #d4c5cb99, inset 0px 11px 28px 0px #ffffff;
 }
 
 .todo-top-icon-container{
     position: absolute;
     width: 20%;
     height: 20%;
-    background-color: rgba(255, 255, 255, 1); 
+    background-color: #ffffff; 
     top: -40px;
     left: 40%;
     border-radius: 50px;
-    box-shadow: inset 0px 35px 68px 0px rgba(212, 197, 203, 0.5), 0px -7px 16px 0px rgba(212, 197, 203, 0.6),  0px 11px 28px 0px rgb(255, 255, 255);
+    box-shadow: inset 0px 35px 68px 0px #d4c5cb80, 0px -7px 16px 0px #d4c5cb99,  0px 11px 28px 0px #ffffff;
 
 }
 
@@ -29,4 +29,46 @@
     max-width: 80%;
     height: 80%;
     margin-top: 10%;
+}
+
+.input-form-container{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6.5rem;
+    width: 30vw;
+    display: inline-flex;
+    height: 3.2rem;
+}
+.input-form-container input{
+    width: 95%;
+    text-align: center;
+    height: 3rem;
+    border: none;
+    background: transparent;
+    border-bottom: 3px solid #d4c5cb;
+    outline: none;
+    position: relative;
+}
+
+.input-container{
+    width: 85%;
+}
+.add-icon-container{
+    width: 3.2rem;
+    border-radius: 50px;
+    text-align: center;
+    padding-top: 8px;
+    box-shadow:  9px 9px 18px #c1b3b9, -9px -9px 18px #e7d7dd;
+    background-color: #ffffff; 
+    box-shadow: 35px 35px 68px 0px #d4c5cb80, 
+    inset -8px -8px 16px 0px #d4c5cb99, inset 0px 11px 28px 0px #ffffff;
+}
+
+.add-icon-container:hover{
+    background-color: #d4c5cb;
+    box-shadow: inset 35px 35px 68px 0px #d4c5cb80, 
+    inset 8px 8px -16px 0px #d4c5cb99, inset 0px -11px -28px 0px #ffffff;
+}
+.fa-plus{
+    font-size: 1.8rem;
 }
