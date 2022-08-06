@@ -10,15 +10,15 @@ const ItemList = ({itemList}) => {
     <>
         <div className ="item-container">
             {
-                itemList.map((item) =>{
+                itemList.map((item, index) =>{
                     return(
-                        <div className ="each-item"> 
+                        <div className ="each-item" key={item.id}> 
                             <div className ="check-mark"> 
                                 <div className="check-icon" style ={checkStyle}></div>
                             </div>
-                            <h4 className ='item-name'>{item}</h4>
+                            <h4 className ='item-name'>{item.data}</h4>
                             <div className='icon-container'>
-                                <i class="fa-solid fa-trash-can"></i>
+                                <i className="fa-solid fa-trash-can"></i>
                             </div>
                         </div>
                     )
