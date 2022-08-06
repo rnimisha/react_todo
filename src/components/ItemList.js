@@ -16,7 +16,7 @@ const ItemList = ({itemList, deleteItem, checkListItem, editItem}) => {
     }
     const unStrikeTextStyle = {
         textDecoration : 'none',
-        color : '#000'
+        color : '#424040'
     }
 
     return (
@@ -25,11 +25,11 @@ const ItemList = ({itemList, deleteItem, checkListItem, editItem}) => {
                 {
                     itemList.map((item, index) =>{
                         return(
-                            <div className ="each-item" key={item.id}> 
+                            <div className ="each-item " key={item.id}> 
                                 <div className ="check-mark"> 
                                     <div className="check-icon" onClick={() => checkListItem(item.id, item.checked)} style = {item.checked === true ? checkStyle : unCheckStyle} ></div>
                                 </div>
-                                <h4 className ='item-name' style={item.checked === true ? strikeTextStyle : unStrikeTextStyle}>{item.data}</h4>
+                                <h4 className ='item-name'  style={item.checked === true ? strikeTextStyle : unStrikeTextStyle}>{item.data}</h4>
                                 <div className='icon-container'>
                                     <i className="fa-solid fa-pen" onClick={() => editItem(item.id, item.data)}></i> 
                                     <span>&nbsp; &nbsp;</span>
