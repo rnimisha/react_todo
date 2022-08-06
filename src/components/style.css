@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Quicksand:wght@300;400;500&display=swap');
+
+body{
+    font-family: 'Quicksand', sans-serif;
+}
 .todo-container{
-    width: 40%;
+    width: 35%;
     height: 70vh;
-    display: flex;
     /* align-items: center; */
-    /* align-content: center; */
     margin: auto;
     margin-top: 15vh;
     position: relative;
@@ -32,11 +35,12 @@
 }
 
 .input-form-container{
-    margin-left: auto;
+    margin-left: 10%;
     margin-right: auto;
     margin-top: 6.5rem;
-    width: 30vw;
+    width: 80%;
     display: inline-flex;
+    justify-content: center;
     height: 3.2rem;
 }
 .input-form-container input{
@@ -48,6 +52,8 @@
     border-bottom: 3px solid #d4c5cb;
     outline: none;
     position: relative;
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .input-container{
@@ -71,4 +77,49 @@
 }
 .fa-plus{
     font-size: 1.8rem;
+}
+
+.item-container{
+    margin-left: 15%;
+    margin-right: auto;
+    margin-top: 2rem;
+    width: 70%;
+}
+
+.each-item{
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+.check-mark{
+    margin-top: 0.3rem;
+    width: 10%;
+    height: 1.2rem;
+}
+.check-icon{
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50px;
+}
+.check-mark:hover{
+    box-shadow: 35px 35px 68px 0px rgba(212, 197, 203, 0.5), inset -7px -7px 16px 0px rgba(212, 197, 203, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255);
+}
+.item-name{
+    margin-left: 15px;
+    width: 80%;
+}
+
+.icon-container{
+    width: 10%;
+    text-align: right;
+}
+.fa-trash-can{
+    margin-top: 0.2rem;
+    font-size: 1.2rem;
+    color: #b4afaf;
+}
+.fa-trash-can:hover{
+    color: #b26565;
 }

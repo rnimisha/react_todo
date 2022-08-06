@@ -1,4 +1,5 @@
 import React from 'react'
+import ItemList from './ItemList';
 import './style.css';
 
 const Todo = () => {
@@ -14,6 +15,7 @@ const Todo = () => {
             </div> 
             <div className='add-icon-container'><i class="fa-solid fa-plus"></i></div>
         </div>
+        <ItemList/>
     </div>
     </>
   )
